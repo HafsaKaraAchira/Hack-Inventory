@@ -35,7 +35,9 @@ class _EquipRequest extends State<EquipRequest> {
                   new Container(
                     child: new ElevatedButton(
                       child: const Text('Submit'),
-                      onPressed: null,
+                      onPressed: () {
+                        
+                      },
                     ),
                   ),
                 ],

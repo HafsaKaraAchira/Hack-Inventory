@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hack_inventory/equipmentRequest.dart';
+import 'package:hack_inventory/Views/equipmentRequest.dart';
 
 void main() {
   runApp(MyApp());
