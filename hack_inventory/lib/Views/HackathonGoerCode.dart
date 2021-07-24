@@ -34,6 +34,7 @@ class _HackathonGoerCode extends State<HackathonGoerCode> {
                   } else if (double.tryParse(value) == null) {
                     return 'Please Input A Number';
                   }
+                  // Have to check if code exits 
                   return null;
                 },
               ),
