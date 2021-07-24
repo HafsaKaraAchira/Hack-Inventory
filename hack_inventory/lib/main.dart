@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack_inventory/Views/HackathonGoerCode.dart';
 
 void main() {
   runApp(MyApp());
@@ -101,7 +102,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 FloatingActionButton.extended(
                     onPressed: () {}, label: const Text('Organiser')),
                 FloatingActionButton.extended(
-                    onPressed: () {}, label: const Text('Hackathon Visitier')),
+                    onPressed: () {Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HackathonGoerCode()),
+            );}, label: const Text('Hackathon Visitier')),
               ],
             ),
           ],

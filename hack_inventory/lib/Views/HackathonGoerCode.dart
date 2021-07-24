@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
-
-class HackathonGoerCode extends StatelessWidget {
+import 'package:flutter/material.dart';
+class HackathonGoerCode extends StatefulWidget {
   @override
   _HackathonGoerCode createState() => _HackathonGoerCode();
 }
@@ -12,7 +11,7 @@ class _HackathonGoerCode extends State<HackathonGoerCode> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Hey there'),
+        title: Text('Hackathon Code'),
       ),
     );
   }
