@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HackathonGoerCode extends StatefulWidget {
   @override
@@ -6,9 +7,15 @@ class HackathonGoerCode extends StatefulWidget {
 }
 
 class _HackathonGoerCode extends State<HackathonGoerCode> {
-
   final _formKey = GlobalKey<FormState>(); // Allows you identify the form
-  final hackCodeController = TextEditingController(); // Allows you to retrive data from the form
+  final hackCodeController =
+      TextEditingController(); // Allows you to retrive data from the form
+
+  void setHackCode(int hackCode) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setInt('hackCode', hackCode);
+    print(prefs.getInt('hackCode'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +41,7 @@ class _HackathonGoerCode extends State<HackathonGoerCode> {
                   } else if (double.tryParse(value) == null) {
                     return 'Please Input A Number';
                   }
-                  // Have to check if code exits 
+                  // Have to check if code exits
                   return null;
                 },
               ),
@@ -45,7 +52,7 @@ class _HackathonGoerCode extends State<HackathonGoerCode> {
                     // Validate will return true if the form is valid, or false if
                     // the form is invalid.
                     if (_formKey.currentState.validate()) {
-                      print(hackCodeController.text);
+                      setHackCode(int.parse(hackCodeController.text));
                     }
                   },
                   child: const Text('Submit'),
