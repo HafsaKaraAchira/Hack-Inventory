@@ -24,7 +24,7 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
         // automaticallyImplyLeading: false,
       ),
       body: Center(
-          //List Of equipment
+          // List of stuff here
           ),
       drawer: Drawer(
           child: ListView(
@@ -38,11 +38,18 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
           ),
           ListTile(
             title: const Text('Equipment Borrowed'),
-            onTap: () {}
+            onTap: () {
+              //TODO: Do stuff
+              Navigator.pop(context);
+            }
           ),
           ListTile(
             title: const Text('Borrow Equipment'),
-            onTap: () {},
+            onTap: () {
+              //TODO: Do stuff
+
+              Navigator.pop(context);
+            },
           ),
         ],
       )),
