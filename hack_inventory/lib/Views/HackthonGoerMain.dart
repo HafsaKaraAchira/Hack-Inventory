@@ -51,8 +51,8 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
             title: const Text('Reserved Equipment'),
             onTap: () {
               setState(() {
-                  widgetListCounter = 1;
-                });
+                widgetListCounter = 1;
+              });
               Navigator.pop(context);
             },
           ),
@@ -66,7 +66,20 @@ class HGEquipBorrow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: const Text('Equipment Borrow'),
+        child: Column(
+          children: [
+            const Text('Equipment Borrow'),
+            ListView.builder(
+                itemCount: 2,
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Center(child: Text('Equipment ${index}')),
+                  );
+                }),
+          ],
+        ),
       ),
     );
   }
