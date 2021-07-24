@@ -15,6 +15,9 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
     });
   }
 
+  int widgetListCounter = 0;
+  List widgetList = [HGEquipBorrow(), HGEquipReserve()];
+
   @override
   Widget build(BuildContext context) {
     getHackCode();
@@ -25,7 +28,7 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
       ),
       body: Center(
           // List of stuff here
-          ),
+          child: widgetList[widgetListCounter]),
       drawer: Drawer(
           child: ListView(
         padding: EdgeInsets.zero,
@@ -37,22 +40,44 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
             child: const Text('Menu'),
           ),
           ListTile(
-            title: const Text('Equipment Borrowed'),
-            onTap: () {
-              //TODO: Do stuff
-              Navigator.pop(context);
-            }
-          ),
+              title: const Text('Equipment Borrowed'),
+              onTap: () {
+                setState(() {
+                  widgetListCounter = 0;
+                });
+                Navigator.pop(context);
+              }),
           ListTile(
-            title: const Text('Borrow Equipment'),
+            title: const Text('Reserved Equipment'),
             onTap: () {
-              //TODO: Do stuff
-
+              setState(() {
+                  widgetListCounter = 1;
+                });
               Navigator.pop(context);
             },
           ),
         ],
       )),
+    );
+  }
+}
+
+class HGEquipBorrow extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: const Text('Equipment Borrow'),
+      ),
+    );
+  }
+}
+
+class HGEquipReserve extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: const Text('Equipment Reserve'),
+      ),
     );
   }
 }
