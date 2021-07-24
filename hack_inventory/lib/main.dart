@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack_inventory/Views/HackathonGoerCode.dart';
+import 'package:hack_inventory/Views/HackthonGoerMain.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      routes: {
+    // When navigating to the "/" route, build the FirstScreen widget.
+    // When navigating to the "/second" route, build the SecondScreen widget.
+    '/hackGoer': (context) => HackathonGoerMain(),
+  },
       home: MyHomePage(title: 'Hack Inventory'),
     );
   }
