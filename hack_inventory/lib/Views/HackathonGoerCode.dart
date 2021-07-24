@@ -74,7 +74,8 @@ class _HackathonGoerCode extends State<HackathonGoerCode> {
                       Navigator.pushReplacementNamed(context, '/hackGoer');
                     }
                   },
-                  child: const Text('Submit'),
+                  child: const Text('Submit'), // instead of a constant submit return reponse based on firebase database call
+            
                 ),
               ),
             ]),
