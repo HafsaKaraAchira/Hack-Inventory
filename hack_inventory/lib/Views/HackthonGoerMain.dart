@@ -69,6 +69,7 @@ class HGEquipBorrow extends StatelessWidget {
         child: Column(
           children: [
             const Text('Equipment Borrow'),
+            Padding(padding: const EdgeInsets.all(8.0),),
             ListView.builder(
                 itemCount: 2,
                 scrollDirection: Axis.vertical,
@@ -76,6 +77,10 @@ class HGEquipBorrow extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Center(child: Text('Equipment ${index}')),
+                    subtitle: ElevatedButton(
+                      child: Text('Book Equip ${index}'),
+                      onPressed: () {},
+                    ),
                   );
                 }),
           ],
@@ -89,7 +94,20 @@ class HGEquipReserve extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: const Text('Equipment Reserve'),
+        child: Column(
+          children: [
+            const Text('Equipment Reserved'),
+            ListView.builder(
+                itemCount: 2,
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Center(child: Text('Equipment You Have ${index}')),
+                  );
+                }),
+          ],
+        ),
       ),
     );
   }
