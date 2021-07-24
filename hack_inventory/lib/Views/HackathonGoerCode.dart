@@ -43,6 +43,7 @@ class _HackathonGoerCode extends State<HackathonGoerCode> {
                   } else if (double.tryParse(value) == null) {
                     return 'Please Input A Number';
                   }
+                  // import firebase code and pass the email. Write if condition here to check with fire base
                   // Have to check if code exits
                   return null;
                 },
