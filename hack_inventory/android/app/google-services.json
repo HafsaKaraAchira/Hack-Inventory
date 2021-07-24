@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "528440503066",
+    "project_id": "hack-inventory",
+    "storage_bucket": "hack-inventory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528440503066:android:2b95a7b784cc40c653daa3",
+        "android_client_info": {
+          "package_name": "com.example.hack_inventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528440503066-5528e0iid316linak4m720etep0ckcf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFOCPj3lmqkQQdVvD-w9-hXY7f5PmzgI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528440503066-5528e0iid316linak4m720etep0ckcf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
