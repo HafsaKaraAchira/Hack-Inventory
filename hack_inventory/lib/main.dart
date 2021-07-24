@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hack_inventory/Views/HackathonGoerCode.dart';
 import 'package:hack_inventory/Views/HackthonGoerMain.dart';
+import 'package:hack_inventory/Views/OrganizerMain.dart';
 
 void main() {
   runApp(MyApp());
@@ -106,7 +107,10 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 FloatingActionButton.extended(
-                    onPressed: () {}, label: const Text('Organiser')),
+                    onPressed: () {Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OrganizerMain()),
+            );}, label: const Text('Organier')),
                 FloatingActionButton.extended(
                     onPressed: () {Navigator.push(
               context,

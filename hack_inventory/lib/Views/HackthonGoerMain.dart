@@ -40,7 +40,7 @@ class _HackathonGoerMain extends State<HackathonGoerMain> {
             child: const Text('Menu'),
           ),
           ListTile(
-              title: const Text('Equipment Borrowed'),
+              title: const Text('Borrow Equipment'),
               onTap: () {
                 setState(() {
                   widgetListCounter = 0;
@@ -69,7 +69,9 @@ class HGEquipBorrow extends StatelessWidget {
         child: Column(
           children: [
             const Text('Equipment Borrow'),
-            Padding(padding: const EdgeInsets.all(8.0),),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+            ),
             ListView.builder(
                 itemCount: 2,
                 scrollDirection: Axis.vertical,
@@ -98,14 +100,15 @@ class HGEquipReserve extends StatelessWidget {
           children: [
             const Text('Equipment Reserved'),
             ListView.builder(
-                itemCount: 2,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Center(child: Text('Equipment You Have ${index}')),
-                  );
-                }),
+              itemCount: 2,
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Center(child: Text('Equipment You Have ${index}')),
+                );
+              },
+            ),
           ],
         ),
       ),
