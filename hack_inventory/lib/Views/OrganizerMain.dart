@@ -87,8 +87,17 @@ class _OrganizerAddEquip extends State<OrganizerAddEquip> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Add Equipment'),
-        // TODO: Form
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Add Equipment Here'),
+            ElevatedButton(
+              child: Text('Add Equipment'),
+              onPressed: () {},
+            ),
+          ],
+          // TODO: Form
+        ),
       ),
     );
   }

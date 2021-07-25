@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => OrganizerMain()),
-            );}, label: const Text('Organier')),
+            );}, label: const Text('Organiser')),
                 FloatingActionButton.extended(
                     onPressed: () {Navigator.push(
               context,
