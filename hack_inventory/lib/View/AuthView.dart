@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:hack_inventory/View/SignInOrganizer.dart';
 import 'package:hack_inventory/View/SignInUser.dart';
-//import 'package:hack_inventory/View/SignUpOrganizer.dart';
 
 class AuthView extends StatefulWidget {
   AuthView({key}) : super(key: key);

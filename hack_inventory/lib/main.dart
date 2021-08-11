@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:firebase_core/firebase_core.dart';
-//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart' ;
 
@@ -11,6 +10,8 @@ import 'package:hack_inventory/Controllers/authentication.dart';
 import 'package:hack_inventory/View/HomePage.dart';
 import 'package:hack_inventory/View/SignUpOrganizer.dart';
 import 'package:hack_inventory/View/SignUpUser.dart';
+import 'package:hack_inventory/View/SignInUser.dart';
+import 'package:hack_inventory/View/SignInOrganizer.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,9 +20,10 @@ Future<void> main() async{
 }//main
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
+    
     return MultiProvider(
       providers: [
         Provider<AuthenticationHelper>(
@@ -33,15 +35,18 @@ class MyApp extends StatelessWidget {
       ],
       child:MaterialApp(
         theme:ThemeData(
-          brightness: Brightness.dark ,
-          primaryColor: Colors.lightBlueAccent,
-          accentColor: Colors.yellow[400]
+          brightness: Brightness.light ,
+          primaryColor: Colors.purple,
+          accentColor: Colors.white,
+          fontFamily: "Roboto",
         ),
         home: AuthenticationWrapper(),
         routes: <String,WidgetBuilder>{
           '/HomePage':(BuildContext context) => HomePage(),
           '/SignUpOrganizer':(BuildContext context) => SignUpOrganizer(),
           '/SignUpUser':(BuildContext context) => SignUpUser(),
+          '/SignInUser':(BuildContext context) => SignInUser(),
+          '/SignInOrganizer':(BuildContext context) => SignInOrganizer(),
         }//routes
       ),
     );
@@ -53,7 +58,7 @@ class AuthenticationWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<User>();
     if (firebaseUser != null) {
-      return HomePage();
+      return AuthView();
     }else{
       return AuthView();
     }
